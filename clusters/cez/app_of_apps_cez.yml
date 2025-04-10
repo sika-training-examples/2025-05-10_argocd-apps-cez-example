@@ -11,12 +11,12 @@ spec:
     server: https://kubernetes.default.svc
   project: default
   sources:
-    - repoURL: https://gitlab.sikalabs.com/examples/cez/argocd-apps-cez-example.git
+    - repoURL: https://gitlab.sikademo.com/examples/cez/argocd-apps-cez-example.git
       path: apps/cez
       directory:
         recurse: true
         exclude: '{**/manifests/**,**/Chart.yaml,**/values.y*ml,**/*.values.y*ml,**/templates/**}'
-    - repoURL: https://gitlab.sikalabs.com/examples/cez/argocd-apps-cez-example
+    - repoURL: https://gitlab.sikademo.com/examples/cez/argocd-apps-cez-example
       path: clusters/cez
   syncPolicy:
     automated:
