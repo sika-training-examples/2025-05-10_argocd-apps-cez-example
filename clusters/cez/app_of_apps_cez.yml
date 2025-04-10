@@ -16,7 +16,7 @@ spec:
       directory:
         recurse: true
         exclude: '{**/manifests/**,**/Chart.yaml,**/values.y*ml,**/*.values.y*ml,**/templates/**}'
-    - repoURL: https://gitlab.sikademo.com/examples/cez/argocd-apps-cez-example
+    - repoURL: https://gitlab.sikademo.com/examples/cez/argocd-apps-cez-example.git
       path: clusters/cez
   syncPolicy:
     automated:
