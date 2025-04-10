@@ -7,12 +7,14 @@ spec:
   version: 8.17.4
   config:
     output:
-      elasticsearch:
+      kafka:
         hosts:
-          - https://es.k8s.sikademo.com:443
-        protocol: https
-        username: elastic
-        password: ${ELASTIC_PASSWORD}
+          - 104.248.25.198:32302
+        topic: 'logs'
+        partition.round_robin:
+          reachable_only: false
+        required_acks: 1
+        max_message_bytes: 1000000
     processors:
       - add_labels:
           labels:
