@@ -16,6 +16,12 @@ spec:
           topics:
             - logs
           group_id: filebeat
+    processors:
+      - decode_json_fields:
+          fields:
+            - message
+          target: ""
+          add_error_key: true
   deployment:
     podTemplate:
       spec:
