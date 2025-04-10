@@ -28,3 +28,9 @@ config:
               source_labels:
                 - __meta_kafka_group_id
               target_label: group
+        # Stage to decode JSON logs
+        pipeline_stages:
+          - json:
+              expressions:
+                # Add any custom fields you want to parse from the JSON logs
+                json: "message"
