@@ -10,7 +10,7 @@ spec:
       kafka:
         hosts:
           - 104.248.25.198:32302
-        topic: 'logs'
+        topic: 'logs-cez2'
         partition.round_robin:
           reachable_only: false
         required_acks: 1
