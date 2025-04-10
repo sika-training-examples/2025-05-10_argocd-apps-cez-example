@@ -1,0 +1,29 @@
+apiVersion: beat.k8s.elastic.co/v1beta1
+kind: Beat
+metadata:
+  name: filebeat-from-kafka
+spec:
+  type: filebeat
+  version: 8.17.0
+  elasticsearchRef:
+    name: elk
+  config:
+    filebeat:
+      inputs:
+        - type: kafka
+          hosts:
+            - logs-kafka-bootstrap.kafka.svc:9092
+          topics:
+            - logs
+          group_id: filebeat
+  deployment:
+    podTemplate:
+      spec:
+        containers:
+          - name: filebeat
+            volumeMounts:
+            - name: data
+              mountPath: /usr/share/filebeat/data
+        volumes:
+          - name: data
+            emptyDir: {}
