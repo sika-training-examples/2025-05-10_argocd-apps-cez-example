@@ -15,6 +15,15 @@ spec:
           reachable_only: false
         required_acks: 1
         max_message_bytes: 1000000
+    processors:
+      - add_labels:
+          labels:
+            cluster: cez
+            env: test
+      - add_tags:
+          tags:
+            - test
+            - training
     filebeat:
       autodiscover:
         providers:

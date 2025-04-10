@@ -13,6 +13,15 @@ spec:
         protocol: https
         username: elastic
         password: ${ELASTIC_PASSWORD}
+    processors:
+      - add_labels:
+          labels:
+            cluster: cez2
+            env: dev
+      - add_tags:
+          tags:
+            - dev
+            - training
     filebeat:
       autodiscover:
         providers:
