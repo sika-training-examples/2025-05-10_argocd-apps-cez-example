@@ -4,7 +4,7 @@ metadata:
   name: elk
 spec:
   version: 8.17.4
-  count: 1
+  count: 2
   elasticsearchRef:
     name: elk
   config:
