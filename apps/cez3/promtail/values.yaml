@@ -1,0 +1,30 @@
+config:
+  clients:
+    - url: http://loki-gateway.logging/loki/api/v1/push
+      tenant_id: 1
+
+
+  snippets:
+    scrapeConfigs: |
+      - job_name: kafka
+        kafka:
+          brokers:
+          - 161.35.17.199:32366
+          topics:
+          - logs
+          labels:
+            job: kafka
+            host: promtail
+        relabel_configs:
+            - action: replace
+              source_labels:
+                - __meta_kafka_topic
+              target_label: topic
+            - action: replace
+              source_labels:
+                - __meta_kafka_partition
+              target_label: partition
+            - action: replace
+              source_labels:
+                - __meta_kafka_group_id
+              target_label: group
