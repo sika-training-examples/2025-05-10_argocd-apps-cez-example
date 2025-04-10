@@ -41,7 +41,7 @@ spec:
                 - Heading: Monitoring
                   Links:
                     - Title: Grafana (gitlab.corp.cez.cz)
-                      URL: https://grafana.sikademo.com
+                      URL: https://grafana.cez3.sikademo.com
                     - Title: Kibana (kibana.corp.cez.cz)
                       URL: https://kibana.sikademo.com
               - Blocks:
