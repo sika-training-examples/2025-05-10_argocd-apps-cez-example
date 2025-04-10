@@ -72,3 +72,7 @@ spec:
                       URL: https://example.com
                     - Title: Proxmox (proxmox.corp.cez.cz)
                       URL: https://example.com
+                - Heading: Storage
+                  Links:
+                    - Title: Minio (minio.corp.cez.cz)
+                      URL: https://minio-console.cez3.sikademo.com

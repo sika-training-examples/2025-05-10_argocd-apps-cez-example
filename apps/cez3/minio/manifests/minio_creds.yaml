@@ -4,5 +4,5 @@ metadata:
   name: minio-creds
 type: Opaque
 stringData:
-  accesskey: admin
-  secretkey: asdfasdf
+  rootUser: admin
+  rootPassword: asdfasdf
