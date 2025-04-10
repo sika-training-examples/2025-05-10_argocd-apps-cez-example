@@ -5,9 +5,16 @@ metadata:
 spec:
   type: filebeat
   version: 8.17.0
-  elasticsearchRef:
-    name: elk
   config:
+    output:
+      kafka:
+        hosts:
+          - logs-kafka-bootstrap.kafka.svc:9092
+        topic: 'logs'
+        partition.round_robin:
+          reachable_only: false
+        required_acks: 1
+        max_message_bytes: 1000000
     filebeat:
       autodiscover:
         providers:
