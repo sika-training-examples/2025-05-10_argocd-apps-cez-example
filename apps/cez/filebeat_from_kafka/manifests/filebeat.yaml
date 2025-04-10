@@ -21,6 +21,7 @@ spec:
           fields:
             - message
           target: ""
+          overwrite_keys: true
           add_error_key: true
   deployment:
     podTemplate:
