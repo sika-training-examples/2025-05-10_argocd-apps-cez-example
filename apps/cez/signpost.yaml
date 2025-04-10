@@ -64,3 +64,11 @@ spec:
                   Links:
                     - Title: Hello CEZ (hello.cez.cz)
                       URL: https://cez3.sikademo.com
+                - Heading: Infra
+                  Links:
+                    - Title: Azure Stack (azure.corp.cez.cz)
+                      URL: https://portal.azure.com
+                    - Title: VMware vCenter (vcenter.corp.cez.cz)
+                      URL: https://example.com
+                    - Title: Proxmox (proxmox.corp.cez.cz)
+                      URL: https://example.com
