@@ -45,17 +45,13 @@ grafana:
       name: CEZ SSO
       scopes: "openid profile email"
       allow_sign_up: true
-      api_url: https://sso.sikademo.com/realms/sikademo/protocol/openid-connect/userinfo
-      auth_url: https://sso.sikademo.com/realms/sikademo/protocol/openid-connect/auth
-      token_url: https://sso.sikademo.com/realms/sikademo/protocol/openid-connect/token
-      client_id: grafana-prod
-      client_secret: "${oidcClientSecret}"
+      api_url: https://sso.sikalabs.com/realms/sikademo/protocol/openid-connect/userinfo
+      auth_url: https://sso.sikalabs.com/realms/sikademo/protocol/openid-connect/auth
+      token_url: https://sso.sikalabs.com/realms/sikademo/protocol/openid-connect/token
+      client_id: default
+      client_secret: default
       role_attribute_path: >
-        contains(groups[*], 'grafana-prod-admins') && 'Admin' ||
-        contains(groups[*], 'admins') && 'Admin' ||
-        contains(groups[*], 'grafana-prod-users') && 'Viewer' ||
-        contains(groups[*], 'users') && 'Viewer' ||
-        'None'
+        'Admin'
     smtp:
       enabled: false
 
