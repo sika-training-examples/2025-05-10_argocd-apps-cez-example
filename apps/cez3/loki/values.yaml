@@ -1,7 +1,7 @@
 deploymentMode: SimpleScalable
 
-global:
-  dnsService: kube-dns
+# global:
+#   dnsService: kube-dns
 
 loki:
   auth_enabled: false
