@@ -50,9 +50,9 @@ loki:
     replication_factor: 1
   storage:
     bucketNames:
-      chunks: chunks
-      ruler: ruler
-      admin: admin
+      chunks: loki-chunks
+      ruler: loki-ruler
+      admin: loki-admin
     type: 's3'
     s3:
       endpoint: http://minio.minio:9000
@@ -120,7 +120,7 @@ backend:
       memory: 1280Mi
   persistence:
     size: 1Gi
-    storageClass: default
+    # storageClass: default
   extraArgs:
     - "-config.expand-env=true"
   extraEnv:
@@ -167,7 +167,7 @@ read:
       memory: 3500Mi
   persistence:
     size: 1Gi
-    storageClass: default
+    # storageClass: default
   extraArgs:
     - "-config.expand-env=true"
   extraEnv:
@@ -213,7 +213,7 @@ write:
       memory: 1500Mi
   persistence:
     size: 2Gi
-    storageClass: default
+    # storageClass: default
   extraArgs:
     - "-config.expand-env=true"
   extraEnv:
