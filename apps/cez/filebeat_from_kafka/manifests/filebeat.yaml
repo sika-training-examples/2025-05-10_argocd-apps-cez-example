@@ -15,6 +15,7 @@ spec:
             - logs-kafka-bootstrap.kafka.svc:9092
           topics:
             - logs
+            - logs-cez2
           group_id: filebeat
     processors:
       - decode_json_fields:
